@@ -1,0 +1,29 @@
+.btn-success {
+  border-radius: 30px;
+}
+.background {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/assets/newyork.jpg") ;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10%;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.card {
+  border-radius: 0 !important;
+}

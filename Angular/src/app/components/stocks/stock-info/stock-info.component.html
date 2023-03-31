@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="stockInfo">
+
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="card col-10">
+        <div class="card-body">
+          <h2>
+            {{companyNameInfo}}, ({{symbolInfo}})
+          </h2>
+          <h1>
+            {{stockPrice}} <br>
+          </h1>
+          {{exchangeInfo}}
+          <hr>
+          <span class="topic">CEO: </span> {{ceoInfo}} <br>
+          <span class="topic">Website:</span> <a href="{{websiteInfo}}"> {{websiteInfo}}</a> <br>
+          <span class="topic">Description:</span> {{descriptionInfo}} <br>
+          <hr>
+          <span class="topic">Industry:</span> {{industryInfo}} <br>
+          <span class="topic">Sector:</span>  {{sectorInfo}}
+        </div>
+        <hr>
+        <form [formGroup]="addForm" (ngSubmit)="buy()">
+          <div class="form-group">
+            <input type="text" class="form-control col-4" formControlName="stockAmount" name="stockAmount" id="stockAmount" placeholder="Type the amount you wish to buy">
+            <br><button class="btn btn-outline-secondary" type="submit">Purchase</button> &nbsp;
+            <span class="notEnoughMoney" *ngIf="cannotBuy">Not sufficient money in wallet!</span>
+          </div>
+        </form>
+        <hr>
+        <button class="btn btn-primary" routerLink="/home">Back</button>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

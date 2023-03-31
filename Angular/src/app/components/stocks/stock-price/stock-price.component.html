@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-center">
+    Latest Prices
+  </div>
+  <div class="card-body">
+    <div *ngFor="let stock of stocks, let i = index">
+      <div class="stockName">
+        <a class="cardStocks" href="" routerLink="/stockInfo" (click)="getStockInfo(stock.symbol, stock.latestPrice, stock.companyName)">
+          {{stock.symbol}} <br>
+        </a>
+      </div>
+      <div class="stockPrice">
+        {{stock.companyName}} <br>
+        {{stock.latestPrice}}
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

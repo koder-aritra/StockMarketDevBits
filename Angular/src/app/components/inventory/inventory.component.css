@@ -1,0 +1,14 @@
+.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.neutral {
+  color: black;
+  font-weight: bold;
+}

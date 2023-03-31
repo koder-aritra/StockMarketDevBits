@@ -1,0 +1,46 @@
+<div class="background"></div>
+<div class="content">
+  <app-navbar></app-navbar>
+  <br><br><br><br><br><br>
+  <div class="card col-4 container d-flex justify-content-center">
+    <div class="card-body">
+      <div class="container d-flex justify-content-center">
+        <div class="col-10">
+          <form [formGroup]="addForm" (ngSubmit)="login()">
+
+            <div class="alert alert-danger" role="alert" *ngIf="checkLogin">
+              Wrong username or password!
+            </div>
+
+            <div class="form-group">
+              <label for="username">
+                username:
+              </label>
+              <div class="alert alert-danger" *ngIf="!addForm.controls['username'].valid && addForm.controls['username'].touched">{{ alert }}</div>
+              <input type="text" class="form-control" formControlName="username" name="username" id="username" placeholder="Enter username">
+            </div>
+
+            <div class="form-group">
+              <label for="password">
+                password:
+              </label>
+              <div class="alert alert-danger" *ngIf="!addForm.controls['password'].valid && addForm.controls['password'].touched">{{ alert }}</div>
+              <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Enter password">
+            </div>
+
+            <p>Don't have an account? Get one <a href="" routerLink="/register">here</a>.</p>
+            <br>
+            <div class="text-center">
+              <button class="btn btn-success btn-lg"
+                      type="submit"
+                      [disabled]="!addForm.valid">&nbsp; Sign in &nbsp;</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

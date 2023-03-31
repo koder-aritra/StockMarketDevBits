@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex justify-content-center">
+    Latest Crypto Prices
+  </div>
+  <div class="card-body">
+    <div *ngFor="let crypto of cryptos, let i = index">
+      <div class="stockName">
+        <a class="cardStocks" href="">
+          {{crypto.symbol}} <br>
+        </a>
+      </div>
+      <div class="stockPrice">
+        {{crypto.companyName}} <br>
+        {{crypto.latestPrice}}
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

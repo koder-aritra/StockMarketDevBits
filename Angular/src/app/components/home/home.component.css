@@ -1,0 +1,16 @@
+.bg-overlay {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("/assets/header.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center center;
+  color: #fff;
+  height: 550px;
+  padding-top: 200px;
+  top: 30%;
+  font-family: "Arial";
+  z-index: auto;
+}
+#button {
+  border-radius: 30px;
+}
+

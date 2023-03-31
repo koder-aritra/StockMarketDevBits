@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<br> <br> <br> <br>
+<div class="card col-4 container d-flex justify-content-center">
+  <div class="card-body">
+    <div class="container d-flex justify-content-center">
+      <div class="col-10">
+        <form [formGroup]="profileForm" (ngSubmit)="update()">
+
+          <label for="username">
+            username:
+          </label>
+          <input type="username" class="form-control" formControlName="username" name="username" id="username" required>
+          <br>
+          <label for="email">
+            email:
+          </label>
+          <input type="text" class="form-control" formControlName="email" name="email" id="email" required>
+          <br>
+          <label for="role">
+            role:
+          </label>
+          <input type="text" class="form-control" formControlName="role" name="role" id="role" required>
+          <br>
+          <label for="firstName">
+            first name:
+          </label>
+          <input type="text" class="form-control" formControlName="firstName" name="firstName" id="firstName" required>
+          <br>
+          <label for="lastName">
+            last name:
+          </label>
+          <input type="text" class="form-control" formControlName="lastName" name="lastName" id="lastName" required>
+          <br><br>
+          <div class="text-center">
+            <button class="btn btn-success btn-lg" type="submit">Update</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<br> <br> <br> <br>
+<div class="row">
+  <div class="col-12">
+    <form [formGroup]="addForm" (ngSubmit)="deposit()">
+
+      <div class="col-8 form-group">
+        <label for="amount">
+          Enter the desired amount you want to deposit:
+        </label>
+        <input type="text" class="form-control" formControlName="amount" name="amount" id="amount" placeholder="Enter your amount">
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-success" type="submit">Deposit</button>
+          <button class="btn btn-danger" type="button" routerLink="/home">Go Back</button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
